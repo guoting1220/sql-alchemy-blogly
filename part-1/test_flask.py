@@ -38,7 +38,7 @@ class UserViewsTestCase(TestCase):
 
         db.session.rollback()
 
-    def test_list_pets(self):
+    def test_list_users(self):
         with app.test_client() as client:
             resp = client.get("/users")
             html = resp.get_data(as_text=True)
